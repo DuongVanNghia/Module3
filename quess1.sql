@@ -4,6 +4,7 @@ create table sanpham(
 		masp int primary key auto_increment,
         tensp varchar(45),
         mota varchar(200),
+        gia float,
         soluong varchar(50)
 );
 select * from sanpham;
@@ -11,7 +12,7 @@ insert into sanpham(tensp,mota,soluong) value ('sac','sac nhanh','5');
 insert into sanpham(masp,tensp,mota,soluong) value ( 1, 'dien thoai','dien thoai di dong','3');
 
 select masp,tensp,mota from cuahang;
-select masp,tensp,mota from cuahang where mota <10000000;
+select masp,tensp,mota from cuahang where gia <10000000;
 update sanpham set soluong =50;
 set sql_safe_updates = 1;
 
